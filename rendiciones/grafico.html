@@ -1,0 +1,17 @@
+<canvas id="documentos" style="width: 250 !important;height: 250 !important"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+<script>
+new Chart(document.getElementById("documentos"),{
+  "type":"bar",
+  "data":{
+    "labels":["Base","Recepcionados","Devoluciones"],
+    "datasets":[{
+      "label":"Estadistica sobre los documentos",
+      "data":["3500","1525","171"],
+      "fill":false,
+      "backgroundColor":["rgba(196, 187, 56, 0.76)","rgba(9, 194, 27, 0.91)","rgba(207, 74, 17, 0.85)","rgba(75, 192, 192, 0.2)","rgba(54, 162, 235, 0.2)","rgba(153, 102, 255, 0.2)","rgba(201, 203, 207, 0.2)"],"borderColor":["rgb(255, 99, 132)","rgb(255, 159, 64)","rgb(255, 205, 86)","rgb(75, 192, 192)","rgb(54, 162, 235)","rgb(153, 102, 255)","rgb(201, 203, 207)"],
+      "borderWidth":1}]},
+      "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}}
+    );
+</script>
