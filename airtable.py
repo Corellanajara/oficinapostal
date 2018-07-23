@@ -7,7 +7,7 @@ db = MySQLdb.connect("192.99.150.93","oficinap_corellana","oficinapostal2018*","
 #db = MySQLdb.connect("localhost","root","789123","oficinaPostal" )
 query = db.cursor()
 
-url = "https://api.airtable.com/v0/appPVvurYaZbgh3qt/Carga%20Carteros?maxRecords=100&view=Grid%20view"
+url = "https://api.airtable.com/v0/appPVvurYaZbgh3qt/Carga%20Carteros"
 headers={"Authorization":"Bearer keyrVS4U5PcmP2ADt"}
 resp = requests.get(url,headers=headers)
 contenido = json.loads(resp.content)
@@ -15,7 +15,6 @@ contenido = json.loads(resp.content)
 for dato in contenido['records']:
     print dato
     id = dato['id']
-
     creado = dato['createdTime']
     sector = dato['fields']['sector']
     cartero = dato['fields']['Cartero']
