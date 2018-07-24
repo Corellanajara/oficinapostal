@@ -1,9 +1,15 @@
-<canvas id="documentos" style="width: 250 !important;height: 250 !important"></canvas>
+<div id="grafico" style="height:500px;width:1100px">
+  <canvas id="documentos" ></canvas>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 
 <script>
 new Chart(document.getElementById("documentos"),{
   "type":"bar",
+  responsive: false,
+  maintainAspectRatio: this.maintainAspectRatio,
+  width:100,
+  height:500,
   "data":{
     "labels":["Base","Recepcionados","Devoluciones"],
     "datasets":[{
@@ -14,4 +20,5 @@ new Chart(document.getElementById("documentos"),{
       "borderWidth":1}]},
       "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}}
     );
+
 </script>

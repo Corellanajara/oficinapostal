@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_1c3c54f5247a4e51844f5b46849b53e3 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+    
+            <style> #vega_1ecd6a1f727e4a97bf378e6208ab703f {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/1.4.3/vega.min.js"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1c3c54f5247a4e51844f5b46849b53e3" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_1c3c54f5247a4e51844f5b46849b53e3 = L.map(
+                                  'map_1c3c54f5247a4e51844f5b46849b53e3',
+                                  {center: [-34.969672,-71.230373],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_d61e16a270944ba1a76f318348d1a89a = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_1c3c54f5247a4e51844f5b46849b53e3);
+        
+    
+
+            var marker_a92e665ec67045828d5ae3f5aea0e647 = L.marker(
+                [-34.969672,-71.230373],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1c3c54f5247a4e51844f5b46849b53e3);
+            
+    function vega_parse(spec, div) {
+            vg.parse.spec(spec, function(chart) { chart({el:div}).update(); });}
+    
+            var popup_abd98f2b8cc94f83abc5797aa8ed23f2 = L.popup({maxWidth: '300'});
+
+            
+                var html_efbf9aef2b9c4769b79728ff1b8ddb83 = $('<div id="html_efbf9aef2b9c4769b79728ff1b8ddb83" style="width: 100.0%; height: 100.0%;">Hello</div>')[0];
+                popup_abd98f2b8cc94f83abc5797aa8ed23f2.setContent(html_efbf9aef2b9c4769b79728ff1b8ddb83);
+            
+                var vega_1ecd6a1f727e4a97bf378e6208ab703f = $('             <div id="vega_1ecd6a1f727e4a97bf378e6208ab703f"></div>             ')[0];
+                popup_abd98f2b8cc94f83abc5797aa8ed23f2.setContent(vega_1ecd6a1f727e4a97bf378e6208ab703f);
+            
+
+            marker_a92e665ec67045828d5ae3f5aea0e647.bindPopup(popup_abd98f2b8cc94f83abc5797aa8ed23f2);
+
+            
+                
+            vega_parse({"legends": [], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x"}, {"scale": "y", "type": "y"}], "height": 100, "padding": "auto", "width": 200, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "symbol", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "size": {"value": 100}, "fill": {"field": "data.col", "scale": "color"}}}}]}], "data": [{"values": [{"val": 1, "col": "y", "idx": 4}, {"val": 2, "col": "y", "idx": 5}, {"val": 3, "col": "y", "idx": 6}], "name": "table"}]},vega_1ecd6a1f727e4a97bf378e6208ab703f);
+            
+            
+        
+</script>
