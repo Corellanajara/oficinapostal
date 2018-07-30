@@ -15,7 +15,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-            <style> #map_f5be3b361ce04524a37e16ade2332ecc {
+            <style> #map_d15e8eeb56bf4af49d6ed45d833afce7 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -33,7 +33,7 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_f5be3b361ce04524a37e16ade2332ecc" ></div>
+            <div class="folium-map" id="map_d15e8eeb56bf4af49d6ed45d833afce7" ></div>
         
 </body>
 <script>    
@@ -43,8 +43,8 @@
                 var bounds = null;
             
 
-            var map_f5be3b361ce04524a37e16ade2332ecc = L.map(
-                                  'map_f5be3b361ce04524a37e16ade2332ecc',
+            var map_d15e8eeb56bf4af49d6ed45d833afce7 = L.map(
+                                  'map_d15e8eeb56bf4af49d6ed45d833afce7',
                                   {center: [-34.9815965906,-71.1645151615],
                                   zoom: 16,
                                   maxBounds: bounds,
@@ -55,7 +55,7 @@
             
         
     
-            var tile_layer_7bcbb0d717004e68911c75d94366bf9e = L.tileLayer(
+            var tile_layer_a2f2c64d8ed1420db0a6f741e4f21f16 = L.tileLayer(
                 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 {
   "attribution": null, 
@@ -65,24 +65,24 @@
   "noWrap": false, 
   "subdomains": "abc"
 }
-                ).addTo(map_f5be3b361ce04524a37e16ade2332ecc);
+                ).addTo(map_d15e8eeb56bf4af49d6ed45d833afce7);
         
     
-            map_f5be3b361ce04524a37e16ade2332ecc.timeDimension = L.timeDimension({period:"PT1M"});
-            map_f5be3b361ce04524a37e16ade2332ecc.timeDimensionControl = L.control.timeDimension({
+            map_d15e8eeb56bf4af49d6ed45d833afce7.timeDimension = L.timeDimension({period:"PT1M"});
+            map_d15e8eeb56bf4af49d6ed45d833afce7.timeDimensionControl = L.control.timeDimension({
                 position: 'bottomleft',
                 autoPlay: true,
                 playerOptions: {
                     transitionTime: 200,
                     loop: true}
                     });
-            map_f5be3b361ce04524a37e16ade2332ecc.addControl(map_f5be3b361ce04524a37e16ade2332ecc.timeDimensionControl);
+            map_d15e8eeb56bf4af49d6ed45d833afce7.addControl(map_d15e8eeb56bf4af49d6ed45d833afce7.timeDimensionControl);
 
-            var timestamped_geo_json_79770b26a1874a6dabb159eeb229a288 = L.timeDimension.layer.geoJson(
+            var timestamped_geo_json_4fb9e8e504d948aea3e707d2bdb438f6 = L.timeDimension.layer.geoJson(
                 L.geoJson({"type": "FeatureCollection", "features": [{"geometry": {"type": "LineString", "coordinates": [[-71.16451516151427, -34.98159659061569], [-71.15964426994324, -34.9825900626842]]}, "type": "Feature", "properties": {"style": {"color": "red", "weight": 5}, "times": ["2017-06-02T00:00:00", "2017-06-02T00:10:00"]}}, {"geometry": {"type": "LineString", "coordinates": [[-71.15964426994324, -34.682590062684206], [-71.1575843334198, -34.679505030038506]]}, "type": "Feature", "properties": {"style": {"color": "blue", "weight": 5}, "times": ["2017-06-02T00:10:00", "2017-06-02T00:20:00"]}}, {"geometry": {"type": "LineString", "coordinates": [[-71.1575843334198, -34.9795050300385], [-71.16337790489197, -34.97804090501406]]}, "type": "Feature", "properties": {"style": {"color": "green", "weight": 15}, "times": ["2017-06-02T00:20:00", "2017-06-02T00:30:00"]}}, {"geometry": {"type": "LineString", "coordinates": [[-71.16337790489197, -34.97804090501406], [-71.16451516151427, -34.98159659061569]]}, "type": "Feature", "properties": {"style": {"color": "#FFFFFF", "weight": 5}, "times": ["2017-06-02T00:30:00", "2017-06-02T00:40:00"]}}]}, {'style': function (feature) {
                     return feature.properties.style
                 }}),
                 {updateTimeDimension: true,addlastPoint: true}
-                ).addTo(map_f5be3b361ce04524a37e16ade2332ecc);
+                ).addTo(map_d15e8eeb56bf4af49d6ed45d833afce7);
         
 </script>

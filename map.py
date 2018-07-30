@@ -31,12 +31,16 @@ from folium.plugins import Draw
 
 m = folium.Map(
     location=[-34.9926116,-71.2527959],
-    zoom_start=13,
-    tiles='Stamen Terrain')
+    zoom_start=13)
 
 draw = Draw()
 
 draw.add_to(m)
+plug = plugins.TimestampedGeoJson({
+    'type': 'FeatureCollection',
+}, period='PT1M', add_last_point=True)
+
+plug.add_to(m)
 
 m.save(os.path.join('recursos', 'dibujar.html'))
 

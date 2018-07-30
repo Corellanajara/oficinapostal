@@ -142,7 +142,7 @@ for file in os.listdir(location):
                 gps = buscar(dia,hora,sesgo,archivo)
                 if gps != None :
                     rutsEncontrados.append(rut)
-                    dato = [gps, rut]
+                    dato = [gps, rut, hora]
                     rendicion.append(dato)
 
 
@@ -161,7 +161,6 @@ for file in os.listdir(location):
     circulo = folium.Circle(
         radius=1000,
         location=[lapromedio, lopromedio],
-        popup='Sector',
         color='crimson',
         fill=False,
     )
@@ -181,8 +180,9 @@ for file in os.listdir(location):
         latitud = ubicacion[0].replace("S","-")
         longitud = ubicacion[1].replace("W","-")
         rut = i[1]
-        folium.Marker([float(latitud),float(longitud)],icon=folium.Icon(color='red',icon='info-sign'), popup='<i>'+rut+'</i>').add_to(archivos[mapa])
-        folium.Marker([float(latitud),float(longitud)],icon=folium.Icon(color='red',icon='info-sign'), popup='<i>'+rut+'</i>').add_to(m)
+        hora = i[2]
+        folium.Marker([float(latitud),float(longitud)],icon =folium.Icon(color='red'), popup='<div><p>Cliente : '+rut+'</p><p>Latitud : '+latitud+'</p><p>Longitud : '+longitud+'</p><p>Hora : '+hora+'</p></div>').add_to(archivos[mapa])
+        folium.Marker([float(latitud),float(longitud)],icon =folium.Icon(color='red'), popup='<div><p>Cliente : '+rut+'</p><p>Latitud : '+latitud+'</p><p>Longitud : '+longitud+'</p><p>Hora : '+hora+'</p></div>').add_to(m)
         data = [latitud,longitud,rut]
         lapromedio = lapromedio + float(latitud)
         lopromedio = lopromedio + float(longitud)
@@ -203,7 +203,6 @@ for file in os.listdir(location):
             weight=5
             ).add_to(registro)
         folium.features.Circle(location=[lapromedio, lopromedio], radius=1500,
-                        popup='Sector',
                         color='black',
                         fill=True,
                         fill_color='#07131d'
@@ -240,7 +239,7 @@ for file in os.listdir(location):
         latitud = ubicacion[0].replace("S","-")
         longitud = ubicacion[1].replace("W","-")
         rut = i[1]
-        folium.Marker([float(latitud),float(longitud)], popup='<i>'+rut+'</i>').add_to(m)
+        folium.Marker([float(latitud),float(longitud)], popup='<div><p>Cliente : '+rut+'</p><p>Latitud : '+latitud+'</p><p>Longitud : '+longitud+'</p><p>Hora : '+hora+'</p></div>',icon =folium.Icon(color='red')).add_to(m)
         #folium.Marker([float(latitud),float(longitud)], popup='<i>'+rut+'</i>').add_to(registros)
         data = [latitud,longitud,rut]
     registro.save("rendiciones/"+fechaCarpeta+"/registros.html")

@@ -15,7 +15,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-            <style> #map_5be8ea149f3f448295788324e53153b9 {
+            <style> #map_2ce109315dcc41f1832e17455cbd8b1c {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -33,7 +33,7 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_5be8ea149f3f448295788324e53153b9" ></div>
+            <div class="folium-map" id="map_2ce109315dcc41f1832e17455cbd8b1c" ></div>
         
 </body>
 <script>    
@@ -43,8 +43,8 @@
                 var bounds = null;
             
 
-            var map_5be8ea149f3f448295788324e53153b9 = L.map(
-                                  'map_5be8ea149f3f448295788324e53153b9',
+            var map_2ce109315dcc41f1832e17455cbd8b1c = L.map(
+                                  'map_2ce109315dcc41f1832e17455cbd8b1c',
                                   {center: [-34.969672,-71.230373],
                                   zoom: 16,
                                   maxBounds: bounds,
@@ -55,7 +55,7 @@
             
         
     
-            var tile_layer_47560c1d59e140d7b9365b221f9f113d = L.tileLayer(
+            var tile_layer_2b3ef050a8c847469b3a5be087febac4 = L.tileLayer(
                 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 {
   "attribution": null, 
@@ -65,24 +65,24 @@
   "noWrap": false, 
   "subdomains": "abc"
 }
-                ).addTo(map_5be8ea149f3f448295788324e53153b9);
+                ).addTo(map_2ce109315dcc41f1832e17455cbd8b1c);
         
     
-            map_5be8ea149f3f448295788324e53153b9.timeDimension = L.timeDimension({period:"PT1M"});
-            map_5be8ea149f3f448295788324e53153b9.timeDimensionControl = L.control.timeDimension({
+            map_2ce109315dcc41f1832e17455cbd8b1c.timeDimension = L.timeDimension({period:"PT1M"});
+            map_2ce109315dcc41f1832e17455cbd8b1c.timeDimensionControl = L.control.timeDimension({
                 position: 'bottomleft',
                 autoPlay: true,
                 playerOptions: {
                     transitionTime: 200,
                     loop: true}
                     });
-            map_5be8ea149f3f448295788324e53153b9.addControl(map_5be8ea149f3f448295788324e53153b9.timeDimensionControl);
+            map_2ce109315dcc41f1832e17455cbd8b1c.addControl(map_2ce109315dcc41f1832e17455cbd8b1c.timeDimensionControl);
 
-            var timestamped_geo_json_11f764ee7f9d4e67b55d7a777410b652 = L.timeDimension.layer.geoJson(
+            var timestamped_geo_json_444cb3343022401fa215d56777b619b7 = L.timeDimension.layer.geoJson(
                 L.geoJson({"type": "FeatureCollection"}, {'style': function (feature) {
                     return feature.properties.style
                 }}),
                 {updateTimeDimension: true,addlastPoint: true}
-                ).addTo(map_5be8ea149f3f448295788324e53153b9);
+                ).addTo(map_2ce109315dcc41f1832e17455cbd8b1c);
         
 </script>

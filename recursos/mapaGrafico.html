@@ -15,7 +15,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-            <style> #map_1c3c54f5247a4e51844f5b46849b53e3 {
+            <style> #map_de849e9d02b045c5bedff812150d2470 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -25,7 +25,7 @@
             </style>
         
     
-            <style> #vega_1ecd6a1f727e4a97bf378e6208ab703f {
+            <style> #vega_1f5aa078659f499dbe72bb3d170e2948 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -38,7 +38,7 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_1c3c54f5247a4e51844f5b46849b53e3" ></div>
+            <div class="folium-map" id="map_de849e9d02b045c5bedff812150d2470" ></div>
         
 </body>
 <script>    
@@ -48,8 +48,8 @@
                 var bounds = null;
             
 
-            var map_1c3c54f5247a4e51844f5b46849b53e3 = L.map(
-                                  'map_1c3c54f5247a4e51844f5b46849b53e3',
+            var map_de849e9d02b045c5bedff812150d2470 = L.map(
+                                  'map_de849e9d02b045c5bedff812150d2470',
                                   {center: [-34.969672,-71.230373],
                                   zoom: 12,
                                   maxBounds: bounds,
@@ -60,7 +60,7 @@
             
         
     
-            var tile_layer_d61e16a270944ba1a76f318348d1a89a = L.tileLayer(
+            var tile_layer_9ee7855007d04426a13a11890acf36ce = L.tileLayer(
                 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 {
   "attribution": null, 
@@ -70,36 +70,36 @@
   "noWrap": false, 
   "subdomains": "abc"
 }
-                ).addTo(map_1c3c54f5247a4e51844f5b46849b53e3);
+                ).addTo(map_de849e9d02b045c5bedff812150d2470);
         
     
 
-            var marker_a92e665ec67045828d5ae3f5aea0e647 = L.marker(
+            var marker_9add358ac1e24edabd21dd368c22b95f = L.marker(
                 [-34.969672,-71.230373],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
-                .addTo(map_1c3c54f5247a4e51844f5b46849b53e3);
+                .addTo(map_de849e9d02b045c5bedff812150d2470);
             
     function vega_parse(spec, div) {
             vg.parse.spec(spec, function(chart) { chart({el:div}).update(); });}
     
-            var popup_abd98f2b8cc94f83abc5797aa8ed23f2 = L.popup({maxWidth: '300'});
+            var popup_3308f798b2a54004b263dfbe0aee5bc4 = L.popup({maxWidth: '300'});
 
             
-                var html_efbf9aef2b9c4769b79728ff1b8ddb83 = $('<div id="html_efbf9aef2b9c4769b79728ff1b8ddb83" style="width: 100.0%; height: 100.0%;">Hello</div>')[0];
-                popup_abd98f2b8cc94f83abc5797aa8ed23f2.setContent(html_efbf9aef2b9c4769b79728ff1b8ddb83);
+                var html_d3cf8dcf2aae44a69abd550a0c12ac34 = $('<div id="html_d3cf8dcf2aae44a69abd550a0c12ac34" style="width: 100.0%; height: 100.0%;">Hello</div>')[0];
+                popup_3308f798b2a54004b263dfbe0aee5bc4.setContent(html_d3cf8dcf2aae44a69abd550a0c12ac34);
             
-                var vega_1ecd6a1f727e4a97bf378e6208ab703f = $('             <div id="vega_1ecd6a1f727e4a97bf378e6208ab703f"></div>             ')[0];
-                popup_abd98f2b8cc94f83abc5797aa8ed23f2.setContent(vega_1ecd6a1f727e4a97bf378e6208ab703f);
+                var vega_1f5aa078659f499dbe72bb3d170e2948 = $('             <div id="vega_1f5aa078659f499dbe72bb3d170e2948"></div>             ')[0];
+                popup_3308f798b2a54004b263dfbe0aee5bc4.setContent(vega_1f5aa078659f499dbe72bb3d170e2948);
             
 
-            marker_a92e665ec67045828d5ae3f5aea0e647.bindPopup(popup_abd98f2b8cc94f83abc5797aa8ed23f2);
+            marker_9add358ac1e24edabd21dd368c22b95f.bindPopup(popup_3308f798b2a54004b263dfbe0aee5bc4);
 
             
                 
-            vega_parse({"legends": [], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x"}, {"scale": "y", "type": "y"}], "height": 100, "padding": "auto", "width": 200, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "symbol", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "size": {"value": 100}, "fill": {"field": "data.col", "scale": "color"}}}}]}], "data": [{"values": [{"val": 1, "col": "y", "idx": 4}, {"val": 2, "col": "y", "idx": 5}, {"val": 3, "col": "y", "idx": 6}], "name": "table"}]},vega_1ecd6a1f727e4a97bf378e6208ab703f);
+            vega_parse({"legends": [], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x"}, {"scale": "y", "type": "y"}], "height": 100, "padding": "auto", "width": 200, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "symbol", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "size": {"value": 100}, "fill": {"field": "data.col", "scale": "color"}}}}]}], "data": [{"values": [{"val": 1, "col": "y", "idx": 4}, {"val": 2, "col": "y", "idx": 5}, {"val": 3, "col": "y", "idx": 6}], "name": "table"}]},vega_1f5aa078659f499dbe72bb3d170e2948);
             
             
         

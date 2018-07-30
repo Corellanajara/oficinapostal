@@ -137,7 +137,7 @@ for file in os.listdir(location):
                 gps = buscar(dia,hora,sesgo,archivo)
                 if gps != None :
                     rutsEncontrados.append(rut)
-                    dato = [gps, rut]
+                    dato = [gps, rut,hora]
                     rendicion.append(dato)
 
 
@@ -178,8 +178,10 @@ for file in os.listdir(location):
         latitud = ubicacion[0].replace("S","-")
         longitud = ubicacion[1].replace("W","-")
         rut = i[1]
-        folium.Marker([float(latitud),float(longitud)], popup='<i>'+rut+'</i>').add_to(archivos[mapa])
-        folium.Marker([float(latitud),float(longitud)], popup='<i>'+rut+'</i>').add_to(m)
+        hora = i[2]
+        print hora
+        folium.Marker([float(latitud),float(longitud)], popup='<div><p>Cliente :'+rut+'</p><p>Latitud : '+latitud+'</p><p>Longitud :'+longitud+'</p><p>Hora : '+hora+'</p></div>').add_to(archivos[mapa])
+        folium.Marker([float(latitud),float(longitud)], popup='<div><p>Cliente :'+rut+'</p><p>Latitud : '+latitud+'</p><p>Longitud :'+longitud+'</p><p>Hora : '+hora+'</p></div>').add_to(m)
         data = [latitud,longitud,rut]
         lapromedio = lapromedio + float(latitud)
         lopromedio = lopromedio + float(longitud)
@@ -229,7 +231,8 @@ for file in os.listdir(location):
         latitud = ubicacion[0].replace("S","-")
         longitud = ubicacion[1].replace("W","-")
         rut = i[1]
-        folium.Marker([float(latitud),float(longitud)], popup='<i>'+rut+'</i>').add_to(m)
+        hora = i[2]
+        folium.Marker([float(latitud),float(longitud)], popup='<div><p>Cliente :'+rut+'</p><p>Latitud : '+latitud+'</p><p>Longitud :'+longitud+'</p><p>Hora : '+hora+'</p></div>').add_to(m)
         #folium.Marker([float(latitud),float(longitud)], popup='<i>'+rut+'</i>').add_to(registros)
         data = [latitud,longitud,rut]
     registro.save("rendiciones/registros.html")
